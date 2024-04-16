@@ -49,7 +49,7 @@ void loop() {
 
     printLightInfo(currentLightLevel, lightLevelDelta);
 
-    // Wait for a short period to avoid spamming the serial monitor:
+    // Wait for a short period to avoid spamming the serial monitor and moving the servo too often:
     delay(250);
 
     // Update the delta tracker
