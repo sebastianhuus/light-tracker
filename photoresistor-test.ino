@@ -1,11 +1,11 @@
 int sensorTestPin = PIN_A0;
 
-void setup() {
+void initPhotoresistor() {
     // Initialize serial communication at 9600 bits per second:
     Serial.begin(9600);
 }
 
-void loop() {
+void testPhotoresistor() {
     // Read the value from the photoresistor:
     int testLightLevel = analogRead(sensorTestPin);
 
