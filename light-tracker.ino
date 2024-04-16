@@ -3,8 +3,8 @@
 
 Servo myservo;  // create servo object to control a servo
 
-int servoPin = 3;
-int sensorPin = PIN_A0;
+int servoPin = 3;       // pwm pin for the servo
+int sensorPin = PIN_A0; // analog pin for light-dependent resistor
 
 int previousLightLevel; // Variable to track the previous read's light levels. used for delta calculations
 
@@ -12,8 +12,8 @@ int previousLightLevel; // Variable to track the previous read's light levels. u
 #define INCREASING 1
 #define DECREASING -1
 
-int servoPosition = 90;
-int servoState = INCREASING;
+int servoPosition = 90;  // The current position of the servo motor in degrees. Initalized at 90 degrees
+int servoState = INCREASING;  // The current state of the servo motor. It can be either INCREASING or DECREASING.
 
 
 void setup() {
