@@ -56,6 +56,13 @@ void loop() {
     previousLightLevel = currentLightLevel;
 }
 
+/**
+ * Prints the current light level, previous light level, and light level delta to the serial monitor.
+ * 
+ * @param currentLightLevel The current light level.
+ * @param lightLevelDelta The difference between the current light level and the previous light level.
+ * @param previousLightLevel Is a global variable so it is not needed as an argument.
+ */
 void printLightInfo(int currentLightLevel, int lightLevelDelta) {
     // Print the light levels and delta to the serial monitor:
     Serial.print("Light Level: ");
