@@ -66,6 +66,11 @@ void printLightInfo(int currentLightLevel, int lightLevelDelta) {
     Serial.println(lightLevelDelta);
 }
 
+/**
+ * Reverses the direction of the servo motor.
+ * If the servo is currently increasing its position, it will start decreasing.
+ * If the servo is currently decreasing its position, it will start increasing.
+ */
 void reverseDirection() {
     // Reverse the velocity
     if (servoState == INCREASING) { servoState = DECREASING; }
