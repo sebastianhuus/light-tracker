@@ -72,6 +72,11 @@ void reverseDirection() {
     else if (servoState == DECREASING) { servoState = INCREASING; }
 }
 
+/**
+ * Increases the angle of the servo motor by the specified increment.
+ * 
+ * @param increment The amount by which to increase the angle.
+ */
 void increaseAngle(int increment) {
     int newPosition = servoPosition + increment;
     if (newPosition > 180) {
@@ -82,6 +87,11 @@ void increaseAngle(int increment) {
     servoPosition = newPosition;
 }
 
+/**
+ * Decreases the angle of the servo motor by the specified decrement value.
+ * 
+ * @param decrement The amount by which to decrement the angle.
+ */
 void decreaseAngle(int decrement) {
     int newPosition = servoPosition - decrement;
     if (newPosition < 0) {
