@@ -47,6 +47,16 @@ void loop() {
         decreaseAngle(5);
     }
 
+    printLightInfo(currentLightLevel, lightLevelDelta);
+
+    // Wait for a short period to avoid spamming the serial monitor:
+    delay(250);
+
+    // Update the delta tracker
+    previousLightLevel = currentLightLevel;
+}
+
+void printLightInfo(int currentLightLevel, int lightLevelDelta) {
     // Print the light levels and delta to the serial monitor:
     Serial.print("Light Level: ");
     Serial.print(currentLightLevel);
@@ -54,12 +64,6 @@ void loop() {
     Serial.print(previousLightLevel);
     Serial.print(" | Light Level Delta: ");
     Serial.println(lightLevelDelta);
-
-    // Wait for a short period to avoid spamming the serial monitor:
-    delay(250);
-
-    // Update the delta tracker
-    previousLightLevel = currentLightLevel;
 }
 
 void reverseDirection() {
