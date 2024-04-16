@@ -1,5 +1,5 @@
-#include <Servo.h>
-#include <math.h>
+#include <Servo.h>  // simplifies servo logic in the code
+#include <math.h>   // used for abs() call
 
 Servo myservo;  // create servo object to control a servo
 
